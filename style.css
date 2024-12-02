@@ -36,7 +36,7 @@ button {
     padding: 10px 20px;
     margin: 10px 0;
     background-color: #403e49;
-    color: white;
+    color: rgb(253, 253, 253);
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -77,10 +77,14 @@ ul {
   }
 
 
+
+
+
+  
   @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 body{
     margin: 0;
-    background-color: #000;
+    background-color: #a89e9e;
     color: #eee;
     font-family: Poppins;
     font-size: 12px;
@@ -89,10 +93,10 @@ a{
     text-decoration: none;
 }
 header{
-    width: 1140px;
-    max-width: 80%;
+    width: 10000px;
+    max-width: 60%;
     margin: auto;
-    height: 50px;
+    height: 20px;
     display: flex;
     align-items: center;
     position: relative;
@@ -105,7 +109,7 @@ header a{
 /* carousel */
 .carousel{
     height: 100vh;
-    margin-top: -50px;
+    margin-top: 0px;
     width: 100vw;
     overflow: hidden;
     position: relative;
@@ -128,9 +132,9 @@ header a{
     max-width: 80%;
     left: 50%;
     transform: translateX(-50%);
-    padding-right: 30%;
+    padding-right: 10%;
     box-sizing: border-box;
-    color: #fff;
+    color: #743c3c;
     text-shadow: 0 5px 10px #0004;
 }
 .carousel .list .item .author{
@@ -216,7 +220,7 @@ header a{
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: #eee4;
+    background-color: rgba(126, 101, 101, 0.267);
     border: none;
     color: #fff;
     font-family: monospace;
