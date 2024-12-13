@@ -35,7 +35,7 @@ main {
 button {
     padding: 10px 20px;
     margin: 10px 0;
-    background-color: #403e49;
+    background-color: #f1f0f5;
     color: white;
     border: none;
     border-radius: 5px;
@@ -44,7 +44,7 @@ button {
 }
 
 button:hover {
-    background-color: #151518;
+    background-color: #ffffff;
 }
 
 /* Footer */
@@ -61,7 +61,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color: #000000;
   }
   
   li {
