@@ -24,7 +24,7 @@
     
                 <div class="parcours">
                     <h2>Cursus scolaire 📚</h2>
-
+                    <!--parcours scolaire-->
                     <div class="parcours-tree">
                         <div class="parcours-etape termine">
                             <div class="parcours-contenu">
@@ -67,7 +67,7 @@
                         </div>
                     </div>
 
-
+                        <h2>Les languages utilisés</h2>
                     <div class="carousel-container">
                         <div class="carousel-track" id="carouselTrack">
                             <!-- Logos de langages de programmation -->
@@ -110,6 +110,57 @@
                             <button class="carousel-btn" onclick="moveCarousel(1)">Suivant →</button>
                         </div>
                     </div>
+                    <h2>Mes diplomes</h2>
+                    <!--mes diplomes-->
+                    <div class="diploma-card">
+                        <div class="header">
+                            <h1>Mes Diplômes</h1>
+                            <p>Portfolio Académique</p>
+                        </div>
+                
+                        <div class="diplomas">
+                            <div class="diploma">
+                                <div class="diploma-info">
+                                    <h3>Diplôme Développeur Web</h3>
+                                    <p>École de Développement Web</p>
+                                    <p>2023</p>
+                                </div>
+                                <div class="diploma-image">
+                                    <img src="/api/placeholder/400/300" alt="Diplôme 1">
+                                    <button class="expand-btn" onclick="openModal('modal1')">+</button>
+                                </div>
+                            </div>
+                
+                            <div class="diploma">
+                                <div class="diploma-info">
+                                    <h3>Diplôme en Design UX/UI</h3>
+                                    <p>Institut de Design Numérique</p>
+                                    <p>2022</p>
+                                </div>
+                                <div class="diploma-image">
+                                    <img src="/api/placeholder/400/300" alt="Diplôme 2">
+                                    <button class="expand-btn" onclick="openModal('modal2')">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+               
+                         <!-- Modaux pour les images de diplômes -->
+                    <div id="modal1" class="modal" onclick="closeModal(event)">
+                        <div class="modal-content">
+                            <span class="close-btn" onclick="closeModal(event)">&times;</span>
+                            <img src="/api/placeholder/800/600" alt="Diplôme 1 (Agrandi)">
+                        </div>
+                    </div>
+                
+                    <div id="modal2" class="modal" onclick="closeModal(event)">
+                        <div class="modal-content">
+                            <span class="close-btn" onclick="closeModal(event)">&times;</span>
+                            <img src="/api/placeholder/800/600" alt="Diplôme 2 (Agrandi)">
+                        </div>
+                    </div>
+
+               
 
                         <p>
                             <strong>BTS SIO</strong> <span>(2022 - À ce jour)</span>

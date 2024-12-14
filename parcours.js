@@ -29,3 +29,17 @@ function moveCarousel(direction) {
     const activeIndex = Math.abs(currentPosition / itemWidth);
     items[activeIndex].classList.add('active');
 }
+
+
+
+function openModal(modalId) {
+    document.getElementById(modalId).style.display = 'block';
+}
+
+function closeModal(event) {
+    // Ferme le modal si on clique sur le fond ou la croix
+    if (event.target.classList.contains('modal') || 
+        event.target.classList.contains('close-btn')) {
+        event.target.closest('.modal').style.display = 'none';
+    }
+}
