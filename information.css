@@ -75,3 +75,80 @@ ul {
     padding: 14px 16px;
     text-decoration: none;
   }
+
+
+  .v-card {
+    width: 300px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.v-card:hover {
+    transform: scale(1.05);
+}
+
+.profile-header {
+    background-color: #4a4a4a;
+    color: white;
+    padding: 20px;
+}
+
+.profile-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid white;
+    margin: 0 auto;
+    background-image: url('https://via.placeholder.com/120');
+    background-size: cover;
+    background-position: center;
+}
+
+.profile-name {
+    margin: 10px 0;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.profile-title {
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.contact-info {
+    padding: 20px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.contact-item i {
+    margin-right: 10px;
+    color: #4a4a4a;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    background-color: #f4f4f4;
+}
+
+.social-links a {
+    margin: 0 10px;
+    color: #4a4a4a;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.social-links a:hover {
+    color: #007bff;
+}

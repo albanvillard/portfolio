@@ -24,6 +24,93 @@
     
                 <div class="parcours">
                     <h2>Cursus scolaire 📚</h2>
+
+                    <div class="parcours-tree">
+                        <div class="parcours-etape termine">
+                            <div class="parcours-contenu">
+                                <div class="parcours-titre">Début de Formation</div>
+                                <div class="parcours-description">Inscription et préparation initiale</div>
+                                <div class="parcours-date">15 Janvier 2024</div>
+                            </div>
+                        </div>
+                
+                        <div class="parcours-etape termine">
+                            <div class="parcours-contenu">
+                                <div class="parcours-titre">Cours Théoriques</div>
+                                <div class="parcours-description">Apprentissage des concepts fondamentaux</div>
+                                <div class="parcours-date">1 Février 2024</div>
+                            </div>
+                        </div>
+                
+                        <div class="parcours-etape actif">
+                            <div class="parcours-contenu">
+                                <div class="parcours-titre">Projet Pratique</div>
+                                <div class="parcours-description">Mise en application des compétences acquises</div>
+                                <div class="parcours-date">15 Mars 2024</div>
+                            </div>
+                        </div>
+                
+                        <div class="parcours-etape">
+                            <div class="parcours-contenu">
+                                <div class="parcours-titre">Examen Final</div>
+                                <div class="parcours-description">Évaluation des connaissances et compétences</div>
+                                <div class="parcours-date">1 Avril 2024</div>
+                            </div>
+                        </div>
+                
+                        <div class="parcours-etape">
+                            <div class="parcours-contenu">
+                                <div class="parcours-titre">Certification</div>
+                                <div class="parcours-description">Obtention du diplôme ou de la certification</div>
+                                <div class="parcours-date">15 Avril 2024</div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="carousel-container">
+                        <div class="carousel-track" id="carouselTrack">
+                            <!-- Logos de langages de programmation -->
+                            <div class="carousel-item active">
+                                <img src="https://cdn.jsdelivr.net/npm/programming-languages-logos/src/javascript/javascript.png" alt="JavaScript">
+                                <div class="logo-name">JavaScript</div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://cdn.jsdelivr.net/npm/programming-languages-logos/src/python/python.png" alt="Python">
+                                <div class="logo-name">Python</div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://cdn.jsdelivr.net/npm/programming-languages-logos/src/java/java.png" alt="Java">
+                                <div class="logo-name">Java</div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://cdn.jsdelivr.net/npm/programming-languages-logos/src/cpp/cpp.png" alt="C++">
+                                <div class="logo-name">C++</div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://cdn.jsdelivr.net/npm/programming-languages-logos/src/php/php.png" alt="PHP">
+                                <div class="logo-name">PHP</div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://cdn.jsdelivr.net/npm/programming-languages-logos/src/ruby/ruby.png" alt="Ruby">
+                                <div class="logo-name">Ruby</div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://cdn.jsdelivr.net/npm/programming-languages-logos/src/swift/swift.png" alt="Swift">
+                                <div class="logo-name">Swift</div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://cdn.jsdelivr.net/npm/programming-languages-logos/src/rust/rust.png" alt="Rust">
+                                <div class="logo-name">Rust</div>
+                            </div>
+                        </div>
+                
+                        <div class="carousel-controls">
+                            <button class="carousel-btn" onclick="moveCarousel(-1)">← Précédent</button>
+                            <button class="carousel-btn" onclick="moveCarousel(1)">Suivant →</button>
+                        </div>
+                    </div>
+
                         <p>
                             <strong>BTS SIO</strong> <span>(2022 - À ce jour)</span>
                             <p>BTS SIO - Option SISR</p>
@@ -73,6 +160,6 @@
             <p>&copy; 2024 Créé par Alban Villard</p>
         </div>
     </footer>
-    <script src="script.js"></script>
+    <script src="parcours.js"></script>
 </body>
 </html>
