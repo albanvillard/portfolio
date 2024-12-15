@@ -152,3 +152,80 @@ ul {
 .social-links a:hover {
     color: #007bff;
 }
+
+
+
+
+
+.interests-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+}
+
+.interest-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    width: 250px;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.interest-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.interest-icon {
+    font-size: 48px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+.interest-title {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.interest-description {
+    display: none;
+    font-size: 0.9em;
+    color: #555;
+    margin-top: 15px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.interest-card.expanded {
+    width: 300px;
+}
+
+.interest-card.expanded .interest-description {
+    display: block;
+    opacity: 1;
+}
+
+/* Couleurs pour les icônes */
+.icon-lecture { color: var(--blue); }
+.icon-musique { color: var(--green); }
+.icon-cinema { color: var(--red); }
+.icon-art { color: var(--purple); }
+.icon-cuisine { color: var(--orange); }
+.icon-technologie { color: var(--indigo); }
+.icon-voyages { color: var(--teal); }
+.icon-photographie { color: var(--pink); }
+
+h1 {
+    text-align: center;
+    color: #333;
+    width: 100%;
+    margin-bottom: 30px;
+}
