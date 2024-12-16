@@ -157,83 +157,6 @@ ul {
 
 
 
-.interests-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    max-width: 1200px;
-}
-
-.interest-card {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    width: 250px;
-    padding: 20px;
-    text-align: center;
-    transition: all 0.3s ease;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-}
-
-.interest-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-}
-
-.interest-icon {
-    font-size: 48px;
-    margin-bottom: 15px;
-    transition: all 0.3s ease;
-}
-
-.interest-title {
-    font-weight: bold;
-    font-size: 1.2em;
-    margin-bottom: 10px;
-}
-
-.interest-description {
-    display: none;
-    font-size: 0.9em;
-    color: #555;
-    margin-top: 15px;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.interest-card.expanded {
-    width: 300px;
-}
-
-.interest-card.expanded .interest-description {
-    display: block;
-    opacity: 1;
-}
-
-/* Couleurs pour les icônes */
-.icon-lecture { color: var(--blue); }
-.icon-musique { color: var(--green); }
-.icon-cinema { color: var(--red); }
-.icon-art { color: var(--purple); }
-.icon-cuisine { color: var(--orange); }
-.icon-technologie { color: var(--indigo); }
-.icon-voyages { color: var(--teal); }
-.icon-photographie { color: var(--pink); }
-
-h1 {
-    text-align: center;
-    color: #333;
-    width: 100%;
-    margin-bottom: 30px;
-}
-
-
-
-
-
 
 .carte-hacker-ethique {
     background-color: white;
@@ -268,7 +191,7 @@ h1 {
     color: #34495e;
     line-height: 1.6;
     margin-bottom: 20px;
-    text-align: left;
+    text-align: center;
 }
 
 .competences {
@@ -287,7 +210,7 @@ h1 {
 .competences ul {
     list-style-type: none;
     padding: 0;
-    text-align: left;
+    text-align: center;
 }
 
 .competences ul li {
@@ -300,7 +223,7 @@ h1 {
     content: '•';
     color: #3498db;
     font-weight: bold;
-    position: absolute;
+    position: center;
     left: 0;
 }
 
@@ -308,4 +231,72 @@ h1 {
     color: #7f8c8d;
     font-style: italic;
     font-size: 14px;
+}
+
+
+
+
+
+
+.conteneur-interets {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    max-width: 2000px;
+    text-align: center;
+}
+
+.carte-interet {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    text-align: center;
+    transition: all 0.3s ease;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.carte-interet:hover {
+    transform: scale(1.05) rotateY(10deg);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+}
+
+.carte-interet .icone {
+    font-size: 50px;
+    margin-bottom: 15px;
+    color: #3498db;
+    transform: translateZ(50px);
+}
+
+.carte-interet h2 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.carte-interet p {
+    color: #7f8c8d;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Couleurs spécifiques pour chaque carte */
+.sport .icone { color: #e74c3c; }
+.films .icone { color: #9b59b6; }
+.voyages .icone { color: #27ae60; }
+.langues .icone { color: #f39c12; }
+.lecture .icone { color: #3498db; }
+.coiffure .icone { color: #1abc9c; }
+
+@media (max-width: 768px) {
+    .conteneur-interets {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .conteneur-interets {
+        grid-template-columns: 1fr;
+    }
 }
