@@ -388,3 +388,34 @@ ul {
 }
 
 
+.carte {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.carte:hover {
+    transform: scale(1.05);
+}
+
+.carte h2 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.carte p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.slam {
+    border-top: 5px solid #3498db;
+}
+
+.sisr {
+    border-top: 5px solid #2ecc71;
+}
