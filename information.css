@@ -52,7 +52,7 @@ footer {
     background-color: #19191b;
     color: white;
     text-align: center;
-    padding: 10px;
+    padding: 5px;
 }
 
 
@@ -61,7 +61,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #000000;
+    background-color: #111111;
   }
   
   li {
@@ -162,8 +162,8 @@ ul {
     background-color: white;
     border-radius: 15px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    width: 400px;
-    padding: 30px;
+    width: 1730px;
+    padding: 60px;
     text-align: center;
     transition: transform 0.3s ease;
 }
@@ -233,7 +233,13 @@ ul {
     font-size: 14px;
 }
 
-
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #ccc3c3;
+  }
 
 
 
@@ -299,4 +305,98 @@ ul {
     .conteneur-interets {
         grid-template-columns: 1fr;
     }
+}
+
+
+
+
+.carte-developpeur {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 1788px;
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.carte-developpeur:hover {
+    transform: scale(1.03);
+}
+
+.titre {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.titre h1 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.titre .sous-titre {
+    color: #7f8c8d;
+    font-size: 16px;
+}
+
+.description {
+    color: #34495e;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.competences {
+    background-color: #f1f3f5;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.competences h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.competences ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+}
+
+.competences ul li {
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.competences ul li::before {
+    content: '•';
+    color: #3498db;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.carriere {
+    color: #7f8c8d;
+    font-style: italic;
+    font-size: 14px;
+}
+
+.technologies {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.technologie {
+    background-color: #3498db;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 12px;
 }
