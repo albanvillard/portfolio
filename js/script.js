@@ -47,4 +47,26 @@
             });
         });
 
+     
+    // Petit script pour animer la carte au survol (Effet 3D léger)
+    const card = document.querySelector('.card-veille'); // Assure-toi d'ajouter la classe 'card-veille' à ta div
+
+    if(card) {
+        card.addEventListener('mousemove', (e) => {
+            const xAxis = (window.innerWidth / 2 - e.pageX) / 25;
+            const yAxis = (window.innerHeight / 2 - e.pageY) / 25;
+            card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+        });
+
+        card.addEventListener('mouseenter', () => {
+            card.style.transition = 'none';
+        });
+
+        card.addEventListener('mouseleave', () => {
+            card.style.transition = 'all 0.5s ease';
+            card.style.transform = `rotateY(0deg) rotateX(0deg)`;
+        });
+    }
+
+
 
