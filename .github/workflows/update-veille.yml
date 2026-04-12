@@ -1,0 +1,35 @@
+name: Mettre à jour la Veille Notion
+
+on:
+  schedule:
+    - cron: '0 2 * * *' # S'exécute tous les jours à 2h du matin
+  workflow_dispatch: # Permet de lancer l'action manuellement depuis GitHub
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout du code
+        uses: actions/checkout@v3
+
+      - name: Installation de Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Installation des dépendances
+        run: npm install
+
+      - name: Lancement du script Notion
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
+        run: node js/fetch-notion.js
+
+      - name: Commit et push des changements (si le veille.json a changé)
+        run: |
+          git config --global user.name "GitHub Action Bot"
+          git config --global user.email "action@github.com"
+          git add veille.json
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Mise à jour automatique de la veille depuis Notion" && git push)
