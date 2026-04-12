@@ -79,7 +79,7 @@ let tousLesArticles = [];
 // Fonction asynchrone pour récupérer les données du fichier JSON
 async function chargerVeille() {
     try {
-        const reponse = await fetch('./veille.json');
+        const reponse = await fetch('../veille.json');
         if (!reponse.ok) {
             throw new Error(`Erreur HTTP: ${reponse.status}`);
         }
