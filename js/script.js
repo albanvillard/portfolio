@@ -111,26 +111,41 @@ function afficherArticles(filtre) {
 
     // Créer le HTML pour chaque article
     articlesAAfficher.forEach(article => {
-        // On prend la première catégorie pour l'afficher sur la carte, ou "Veille" par défaut
+        // 1. Gérer le tag (si vide, on met "Veille")
         const tagAffichage = (article.categories && article.categories.length > 0) ? article.categories[0] : 'Veille';
 
-        // TON SUPERBE DESIGN EST INTÉGRÉ ICI
+        // 2. Gérer l'image par défaut (si l'image Notion manque)
+        let imageAffichage = article.image;
+        if (!imageAffichage || imageAffichage === 'chemin/vers/image-par-defaut.jpg') {
+            // On met une belle image tech par défaut pour éviter l'image cassée
+            imageAffichage = 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=500&q=80';
+        }
+
+        // 3. Raccourcir la description (Tronquer à 150 caractères maximum)
+        let descriptionCourte = article.description || '';
+        if (descriptionCourte.length > 150) {
+            descriptionCourte = descriptionCourte.substring(0, 150) + '...';
+        }
+
+        // 4. Intégrer le HTML avec les variables corrigées
         const carteHTML = `
             <div class="col-lg-4 col-md-6 mb-4">
-                <div class="card-veille" style="background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); height: 100%;">
-                    <img src="${article.image}" alt="Cover de ${article.titre}" style="width: 100%; height: 200px; object-fit: cover;">
+                <div class="card-veille" style="background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); height: 100%; display: flex; flex-direction: column;">
+                    <img src="${imageAffichage}" alt="Cover de ${article.titre}" style="width: 100%; height: 200px; object-fit: cover;">
                     
-                    <div class="card-body" style="padding: 20px;">
-                        <span style="background: #e3f2fd; color: #1565c0; padding: 4px 10px; border-radius: 20px; font-size: 0.8em; font-weight: bold;">${tagAffichage}</span>
-                        <span style="float: right; font-size: 0.8em; color: #999;">${article.date}</span>
+                    <div class="card-body" style="padding: 20px; display: flex; flex-direction: column; flex-grow: 1;">
+                        <div>
+                            <span style="background: #e3f2fd; color: #1565c0; padding: 4px 10px; border-radius: 20px; font-size: 0.8em; font-weight: bold;">${tagAffichage}</span>
+                            <span style="float: right; font-size: 0.8em; color: #999;">${article.date}</span>
+                        </div>
                         
                         <h5 style="margin-top: 15px; font-weight: bold;">${article.titre}</h5>
                         
-                        <p style="font-size: 0.9em; color: #555; margin-top: 10px;">
-                            ${article.description}
+                        <p style="font-size: 0.9em; color: #555; margin-top: 10px; flex-grow: 1;">
+                            ${descriptionCourte}
                         </p>
                         
-                        <a href="${article.lien}" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold; font-size: 0.9em;">Lire l'analyse complète →</a>
+                        <a href="${article.lien}" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold; font-size: 0.9em; margin-top: auto;">Lire l'analyse complète →</a>
                     </div>
                 </div>
             </div>
